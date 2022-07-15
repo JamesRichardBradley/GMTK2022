@@ -42,8 +42,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(Vector3.Distance(transform.position, targetPos) > 2)
-            rb.AddForce(targetPos.normalized * speed);
+        float distToTarget = Vector3.Distance(transform.position, targetPos);
+
+        if (distToTarget > 6)
+        {
+            float speedCoef = Mathf.Clamp(distToTarget,0,speed);
+
+            rb.AddForce(targetPos.normalized * speedCoef, ForceMode.Force);
+        }
 
     }
 
@@ -55,5 +61,12 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         isGrounded=false;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(targetPos, 1f);
+        Gizmos.DrawLine(transform.position, targetPos);
     }
 }
