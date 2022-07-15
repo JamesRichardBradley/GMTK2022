@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     Vector3 targetPos;
 
     public float speed = 8f;
+    public float jumpForce;
+    private bool isGrounded;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -30,6 +33,11 @@ public class PlayerMovement : MonoBehaviour
                 targetPos = hit.point;
             }
         }
+
+        if(isGrounded && Input.GetKeyDown("space"))
+        {
+            rb.AddForce(Vector3.up * jumpForce,ForceMode.Impulse);
+        }
     }
 
     private void FixedUpdate()
@@ -37,5 +45,15 @@ public class PlayerMovement : MonoBehaviour
         if(Vector3.Distance(transform.position, targetPos) > 2)
             rb.AddForce(targetPos.normalized * speed);
 
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        isGrounded = true;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        isGrounded=false;
     }
 }
