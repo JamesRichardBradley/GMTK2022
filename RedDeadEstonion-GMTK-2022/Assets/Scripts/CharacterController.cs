@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float speed = 8f;
+
+    Rigidbody m_rigidbody;
+    Vector2 inputs;
+
+
     void Start()
     {
-        //oi oi savlaoy
+        m_rigidbody = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        inputs.x = Input.GetAxis("Horizontal");
+        inputs.y = Input.GetAxis("Vertical");
+    }
+
+    void FixedUpdate()
+    {
+        Vector3 moveDir = (transform.forward * inputs.y + transform.right * inputs.x) * speed;
+        m_rigidbody.AddForce(new Vector3(moveDir.x, m_rigidbody.velocity.y, moveDir.z));    
     }
 }
