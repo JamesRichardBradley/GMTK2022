@@ -5,4 +5,6 @@ using UnityEngine;
 public interface IDiceCheck<T>
 {
     public bool Check(int dieFace);
+
+    public void Animate();
 }

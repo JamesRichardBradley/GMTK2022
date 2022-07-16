@@ -6,7 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
 
 
-    int DieFacing()
+    public int DieFacing()
     {
         int die = 0;
 
