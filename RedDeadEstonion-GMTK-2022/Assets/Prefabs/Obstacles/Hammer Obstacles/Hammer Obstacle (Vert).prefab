@@ -1219,6 +1219,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5a5c0c842e339d94a890326da01ffa78, type: 3}
   m_PrefabInstance: {fileID: 7727016079854780280}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7492452656270836265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5c0c842e339d94a890326da01ffa78, type: 3}
+  m_PrefabInstance: {fileID: 7727016079854780280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &8701813605410503147
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492452656270836265}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: 5a5c0c842e339d94a890326da01ffa78, type: 3}
 --- !u!1001 &8336047399827358095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1288,8 +1307,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a5c0c842e339d94a890326da01ffa78, type: 3}
+--- !u!1 &9182557204325760222 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a5c0c842e339d94a890326da01ffa78, type: 3}
+  m_PrefabInstance: {fileID: 8336047399827358095}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8369147764624991844 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5a5c0c842e339d94a890326da01ffa78, type: 3}
   m_PrefabInstance: {fileID: 8336047399827358095}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &7266231727189287110
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9182557204325760222}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: 5a5c0c842e339d94a890326da01ffa78, type: 3}

@@ -17,11 +17,11 @@ public class ColourSelect : MonoBehaviour
 
             if (selection <= 5)
             {
-                chipRenderer.material.SetColor("_Color", Color.red);
+                chipRenderer.material.SetColor("_BaseColor", Color.red);
             }
             else
             {
-             chipRenderer.material.SetColor("_Color", Color.black);
+             chipRenderer.material.SetColor("_BaseColor", Color.black);
             }
         }
     }
