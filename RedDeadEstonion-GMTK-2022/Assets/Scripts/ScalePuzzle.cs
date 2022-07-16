@@ -15,4 +15,12 @@ public class ScalePuzzle : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(gameObject.tag == "Player")
+        {
+             
+        }
+    }
 }
