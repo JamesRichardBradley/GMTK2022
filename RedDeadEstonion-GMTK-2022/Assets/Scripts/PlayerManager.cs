@@ -5,21 +5,28 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
    
+    public float forwardAngle;
+
+    private void Update()
+    {
+        forwardAngle = Vector3.Angle(transform.forward, Vector3.up);
+
+    }
 
     int DieFacing()
     {
         int die = 0;
 
-        float forwardAngle = Vector3.Angle(transform.forward,Vector3.up);
-        if(forwardAngle > 340 || forwardAngle < 20)
+        forwardAngle = Vector3.Angle(transform.forward,Vector3.up);
+        if(forwardAngle < 20)
             die = 1;
-        if (forwardAngle > 160 || forwardAngle < 200)
+        if (forwardAngle > 160 && forwardAngle < 200)
             die = 5;
 
         return die;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         print(DieFacing());
     }
