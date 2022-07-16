@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody rb;
     Vector3 targetPos;
-
     public float speed = 8f;
     public float jumpForce;
     private bool isGrounded;
@@ -46,9 +45,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (distToTarget > 6)
         {
-            float speedCoef = Mathf.Clamp(distToTarget,0,speed);
+            Vector3 moveDir = targetPos - transform.position;
 
-            rb.AddForce(targetPos.normalized * speedCoef, ForceMode.Force);
+            rb.AddForce(moveDir.normalized * speed, ForceMode.Force);
         }
 
     }
