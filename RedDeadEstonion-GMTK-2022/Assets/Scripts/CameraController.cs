@@ -7,7 +7,6 @@ public class CameraController : MonoBehaviour
     public Transform target;
     public Vector3 velocity;
     float yaw;
-    float pitch;
     private float desiredRot;
 
     public Vector3 offset = new Vector3(0f, 3f, 5f);
@@ -38,10 +37,9 @@ public class CameraController : MonoBehaviour
 
 
         float degreeTarget = Input.GetAxis("Mouse X") * sensitivity;
+
         desiredRot = Mathf.LerpAngle(0,degreeTarget, damping * Time.deltaTime);
         transform.RotateAround(target.position, Vector3.up, desiredRot);
-
-        float z = Mathf.Clamp(transform.position.z, 2f, offset.z);
 
     }
 }
