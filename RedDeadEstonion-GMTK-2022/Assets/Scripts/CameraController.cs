@@ -21,6 +21,10 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        float horizontal = Input.GetAxis("Mouse X") * sensitivity;
+
+
+
         transform.position = Vector3.SmoothDamp(transform.position, target.position + offset, ref velocity, smoothDamp);
 
         var targetRotation = Quaternion.LookRotation((target.transform.position) - transform.position);
