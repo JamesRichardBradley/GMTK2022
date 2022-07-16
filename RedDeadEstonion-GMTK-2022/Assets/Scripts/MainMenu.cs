@@ -8,18 +8,6 @@ public class MainMenu : MonoBehaviour
     private string mainLevel = "SampleScene";
     private string mainMenu = "MainMenu";
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void StartGame()
     {
         SceneManager.LoadScene(mainLevel);
@@ -30,7 +18,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("OptionsMenu");
     }
 
-    public void CloseOptions()
+    public void CloseButton()
     {
         SceneManager.LoadScene(mainMenu);
     }
@@ -40,9 +28,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("CreditsMenu");
     }
 
-    public void CloseCredits()
+    public void OpenControlls()
     {
-        SceneManager.LoadScene(mainMenu);
+        SceneManager.LoadScene("ControllsMenu");
     }
 
     public void QuitGame()
