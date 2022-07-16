@@ -6,6 +6,8 @@ public class DieTrigger : MonoBehaviour, IDiceCheck<int>
 {
     public int correctDieFace = 5;
 
+    public Animator interactionObject;
+
     public bool Check(int dieFace)
     {
         return correctDieFace == dieFace;
@@ -13,16 +15,20 @@ public class DieTrigger : MonoBehaviour, IDiceCheck<int>
 
     public void Animate()
     {
-
+        interactionObject.SetTrigger("Activate");
     }
 
-    private void OnCollisionStay(Collision collision)
+    
+
+    private void OnTriggerStay(Collider other)
     {
-        if(TryGetComponent<PlayerManager>(out PlayerManager player))
+        if(other.TryGetComponent<PlayerManager>(out PlayerManager player))
         {
             if (Check(player.DieFacing()))
                 Animate();
 
         }
     }
+
+    
 }
