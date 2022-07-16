@@ -33,7 +33,6 @@ public class PlayerManager : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        print(DieFacing());
     }
 
     private void OnDrawGizmos()
