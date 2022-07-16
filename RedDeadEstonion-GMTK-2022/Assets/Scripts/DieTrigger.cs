@@ -15,6 +15,8 @@ public class DieTrigger : MonoBehaviour, IDiceCheck<int>
 
     public void Animate()
     {
+        print("Trigger");
+
         interactionObject.SetTrigger("Activate");
     }
 

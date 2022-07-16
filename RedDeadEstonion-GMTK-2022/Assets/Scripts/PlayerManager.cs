@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-
+    int currentFace;
 
     public int DieFacing()
     {
@@ -28,6 +28,7 @@ public class PlayerManager : MonoBehaviour
         if (upAngle > 160 && upAngle < 200)
             die = 3;
 
+        currentFace = die;
         return die;
     }
 
