@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IDiceCheck<T>
 {
-    public void Check(int dieFace);
+    public bool Check(int dieFace);
 }
