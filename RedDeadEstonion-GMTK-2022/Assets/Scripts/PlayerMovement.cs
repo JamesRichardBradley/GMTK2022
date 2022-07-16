@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float distToTarget = Vector3.Distance(transform.position, targetPos);
 
-        if (distToTarget > 6)
+        if (distToTarget > 2)
         {
             Vector3 moveDir = targetPos - transform.position;
 
