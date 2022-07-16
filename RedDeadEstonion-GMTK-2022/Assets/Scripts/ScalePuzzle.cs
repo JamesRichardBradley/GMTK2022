@@ -4,20 +4,14 @@ using UnityEngine;
 
 public class ScalePuzzle : MonoBehaviour, IDiceCheck<int>
 {
-    // Start is called before the first frame update
-    void Start()
+    public int correctDieFace = 5;
+
+    
+
+    public bool Check(int dieFace)
     {
-        
+        return correctDieFace == dieFace;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void Check(int dieFace)
-    {
-
-    }
+    
 }
