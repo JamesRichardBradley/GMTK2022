@@ -21,8 +21,10 @@ public class RouletteAudio : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("Sound");
             rouletteimpact.Play();
         }
     }
