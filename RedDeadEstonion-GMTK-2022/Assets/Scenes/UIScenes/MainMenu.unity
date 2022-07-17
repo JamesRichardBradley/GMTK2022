@@ -591,7 +591,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 99277445}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: OpenCredits
+        m_MethodName: OpenControlls
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2301,7 +2301,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 99277445}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: OpenControlls
+        m_MethodName: OpenCredits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
