@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject bottomOutPoint;
     Rigidbody rb;
     Vector3 targetPos;
     public float speed = 8f;
@@ -39,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce,ForceMode.Impulse);
         }
 
-        if(transform.position.y<= -71.1)
+        if(transform.position.y <= bottomOutPoint.transform.position.y)
         {
             SceneManager.LoadScene("GameOverUI");
         }
