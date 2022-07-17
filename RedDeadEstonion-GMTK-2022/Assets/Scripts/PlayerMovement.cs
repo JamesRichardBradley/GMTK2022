@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -36,6 +37,11 @@ public class PlayerMovement : MonoBehaviour
         if(isGrounded && Input.GetKeyDown("space"))
         {
             rb.AddForce(Vector3.up * jumpForce,ForceMode.Impulse);
+        }
+
+        if(transform.position.y<= -71.1)
+        {
+            SceneManager.LoadScene("GameOverUI");
         }
     }
 
