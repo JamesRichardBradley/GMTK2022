@@ -9,7 +9,7 @@ public class WinGame : MonoBehaviour
     {
         if (player.name == "PlayerDie")
         {
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene("WinScene");
         }
     }
 }
