@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/UIScenes/MainMenu.unity
     guid: 611d4a8164c96bb4e986920b7a002eef
   - enabled: 1
-    path: Assets/Scenes/SampleScene2.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/UIScenes/OptionsMenu.unity
     guid: 69f697de76d5fc44bbe17fb7cc3839f0
   - enabled: 1
@@ -23,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UIScenes/GameOverUI.unity
     guid: c1d81765a66c3c0409a38411b1010170
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 1a1f06694d31931458fac7a55ab01584
   m_configObjects: {}
